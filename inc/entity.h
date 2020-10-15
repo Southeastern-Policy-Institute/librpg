@@ -33,12 +33,13 @@ Public Declare Function CreateEntity _
   Lib "librpg.dll" Alias "rpg_CreateEntity" as UInteger
   */
 
-  LIBSPEC LINKAGE rpg_entity_t rpg_CreateEntity ( const tchar_t* name,
-                                                  const tchar_t* desc,
-                                                  unsigned int weight,
-                                                  unsigned int size);
-  LIBSPEC LINKAGE int rpg_DestroyEntity (rpg_entity_t);
-  LIBSPEC LINKAGE const tchar_t* rpg_GetEntityName (rpg_entity_t);
+  LIBSPEC LINKAGE rpg_entity_t    rpg_CreateEntity (const tchar_t* name,
+                                                    const tchar_t* desc,
+                                                    unsigned int weight,
+                                                    unsigned int size);
+  LIBSPEC LINKAGE int             rpg_DestroyEntity (rpg_entity_t);
+  LIBSPEC LINKAGE const tchar_t*  rpg_GetEntityName (rpg_entity_t);
+  LIBSPEC LINKAGE const tchar_t*  rpg_GetEntityDesc (rpg_entity_t);
 
 
 #   undef LINKAGE
